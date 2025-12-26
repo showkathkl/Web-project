@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Hirely | Home Services</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="User.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<div class="bg"></div>
+
+<div class="layout">
+
+  <aside class="sidebar">
+    <h2 class="brand">⚡ Hirely</h2>
+    <nav>
+      <a class="active" onclick="showSection('home',this)">Home</a>
+      <a onclick="showSection('services',this)">Services</a>
+      <a onclick="showSection('bookings',this)">Bookings</a>
+      <a onclick="showSection('account',this)">Account</a>
+    </nav>
+  </aside>
+
+  <main class="content">
+
+    <!-- HOME -->
+    <section id="home" class="page active">
+
+      <div class="hero-box clickable" onclick="openModal(0)">
+        <h1>Home Services, Simplified</h1>
+        <p>Tap to book professional services instantly</p>
+      </div>
+
+      <div class="offer-row">
+        <div class="offer-card pink clickable" onclick="openModal(1)">
+          <h3>SALON AT HOME</h3>
+          <p>Up to 40% OFF</p>
+        </div>
+        <div class="offer-card blue clickable" onclick="openModal(2)">
+          <h3>AC SERVICE</h3>
+          <p>Cooling experts</p>
+        </div>
+        <div class="offer-card green clickable" onclick="openModal(5)">
+          <h3>PEST CONTROL</h3>
+          <p>Safe & effective</p>
+        </div>
+      </div>
+
+      <h2 class="section-heading">Categories</h2>
+      <div class="category-row">
+        <div class="category-card clickable" onclick="openModal(0)">Cleaning</div>
+        <div class="category-card clickable" onclick="openModal(1)">Salon</div>
+        <div class="category-card clickable" onclick="openModal(2)">AC Service</div>
+        <div class="category-card clickable" onclick="openModal(3)">Electrician</div>
+        <div class="category-card clickable" onclick="openModal(4)">Plumber</div>
+        <div class="category-card clickable" onclick="openModal(5)">Pest Control</div>
+      </div>
+
+      <h2 class="section-heading">Popular Services</h2>
+      <div class="preview-row">
+        <div class="preview-card clickable" onclick="openModal(0)">
+          <img src="cleaning.jpg">
+          <span>Home Cleaning</span>
+        </div>
+        <div class="preview-card clickable" onclick="openModal(1)">
+          <img src="salon.jpg">
+          <span>Home Salon</span>
+        </div>
+        <div class="preview-card clickable" onclick="openModal(2)">
+          <img src="ac.jpg">
+          <span>AC Service</span>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="page">
+      <h2>All Services</h2>
+      <div class="card-grid" id="serviceGrid"></div>
+    </section>
+
+    <!-- BOOKINGS -->
+    <section id="bookings" class="page">
+      <h2>Your Bookings</h2>
+      <div class="booking-grid" id="bookingList"></div>
+    </section>
+
+    <!-- ACCOUNT -->
+    <section id="account" class="page">
+      <div class="account-card">
+        <h3>👤 Profile</h3>
+        <p><b>Name:</b> Demo User</p>
+        <p><b>Email:</b> demo@hirely.com</p>
+        <p><b>Phone:</b> +91 98765 43210</p>
+      </div>
+
+      <div class="account-options">
+        <div class="option-card">Edit Profile</div>
+        <div class="option-card">Payment Methods</div>
+        <div class="option-card">Help & Support</div>
+        <div class="option-card">Logout</div>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<div class="modal" id="modal">
+  <div class="modal-box">
+    <img id="mImg">
+    <h3 id="mName"></h3>
+    <p id="mDesc"></p>
+    <p class="price">₹<span id="mPrice"></span></p>
+    <button onclick="confirmBooking()">Confirm Booking</button>
+    <span class="close" onclick="closeModal()">×</span>
+  </div>
+</div>
+
+<script src="User.js"></script>
+</body>
+</html>

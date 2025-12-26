@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Services | Hirely</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>My Services</h1>
+</header>
+
+<div class="navbar">
+  <a href="dashboard.html">Dashboard</a>
+  <a href="bookings.html">Bookings</a>
+  <a href="earnings.html">Earnings</a>
+</div>
+
+<div class="container">
+  <h2>Add New Service</h2>
+
+  <form onsubmit="addService(); return false;">
+    <input id="serviceName" placeholder="Service Name">
+    <textarea id="description" placeholder="Description"></textarea>
+    <input id="price" placeholder="Price">
+    <input id="duration" placeholder="Duration">
+    <button>Add Service</button>
+  </form>
+</div>
+
+<table id="serviceTable">
+  <tr>
+    <th>Service</th>
+    <th>Description</th>
+    <th>Price</th>
+    <th>Duration</th>
+  </tr>
+</table>
+
+<script src="js/script.js"></script>
+</body>
+</html>

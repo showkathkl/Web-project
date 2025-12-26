@@ -1,0 +1,234 @@
+/* =========================
+   RESET & GLOBAL
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', Arial, sans-serif;
+  background-color: #f4f6fb;
+  color: #2c3e50;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: 0.3s;
+}
+
+/* =========================
+   HEADERS
+========================= */
+header {
+  text-align: center;
+  padding: 20px;
+  background-color: #eaf3ff;
+  border-radius: 12px;
+  margin: 20px 0;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+}
+
+header h1, header h2, header h3 {
+  color: #1e3a8a;
+  font-weight: 600;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+.navbar {
+  background: linear-gradient(90deg, #4a90e2, #6fc3ff);
+  padding: 12px 0;
+  text-align: center;
+  border-radius: 8px;
+  margin: 0 5% 20px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.navbar a {
+  color: white;
+  font-weight: 500;
+  margin: 0 20px;
+  font-size: 15px;
+}
+
+.navbar a:hover {
+  color: #ffd700;
+}
+
+/* =========================
+   FORMS
+========================= */
+.container, .form-container, .parent_form {
+  background-color: #fff;
+  border-radius: 16px;
+  padding: 30px 25px;
+  max-width: 500px;
+  margin: 20px auto;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input, textarea, select, button {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  border-color: #2563eb;
+}
+
+button {
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: #1e40af;
+}
+
+/* =========================
+   TABLES (Service / Bookings / Earnings)
+========================= */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+  font-size: 14px;
+}
+
+th {
+  background-color: #4a90e2;
+  color: white;
+}
+
+.status {
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 6px;
+  display: inline-block;
+  font-size: 13px;
+}
+
+.completed { background: #d4f8d4; color: #2c662d; }
+.pending { background: #fff2cc; color: #8a6d3b; }
+.cancelled { background: #ffd6d6; color: #a94442; }
+
+/* =========================
+   SUMMARIES & CARDS
+========================= */
+.summary, .earnings-summary {
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+.earnings-summary {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.earnings-card {
+  background-color: #fff;
+  border-radius: 16px;
+  padding: 20px;
+  width: 220px;
+  text-align: center;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.earnings-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.12);
+}
+
+.earnings-card h3 {
+  color: #2563eb;
+  margin-bottom: 10px;
+}
+
+.earnings-card p {
+  font-size: 16px;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer, .footer {
+  text-align: center;
+  padding: 18px;
+  margin-top: 40px;
+  background-color: #eaf3ff;
+  border-radius: 12px;
+  color: #2c3e50;
+  font-size: 14px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+}
+
+/* =========================
+   SUPPORT PAGE
+========================= */
+.support-container {
+  max-width: 500px;
+  margin: 30px auto;
+  padding: 25px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+}
+
+.support-container h3 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.support-container input, .support-container textarea {
+  width: 100%;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media screen and (max-width: 768px) {
+  .container, .form-container, .support-container {
+    padding: 20px;
+    margin: 15px;
+  }
+
+  .earnings-summary {
+    flex-direction: column;
+    align-items: center;
+  }
+}
